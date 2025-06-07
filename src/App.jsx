@@ -1,8 +1,17 @@
+import { Header } from "./components/Header"
+import { ProductCatalog } from "./components/ProductCatalog"
+import { CartProvider } from "./contexts/CartContext";
+import (Header)
 function App() {
   return (
-    <h1 class="text-3xl font-bold underline text-red-700">
-      Hello world!
-    </h1>
+     <CartProvider>
+      <div className="bg-gray-100 min-h-screen">
+        <div className="max-w-3xl mx-auto">
+          <Header />
+          <ProductCatalog />
+        </div>
+      </div>
+    </CartProvider>
   )
 }
 
